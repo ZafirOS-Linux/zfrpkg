@@ -5,7 +5,6 @@
 #    <repo directory> <repo url for sync>
 #
 ports:
-  /usr/ports/myrepo
   /usr/ports/core        http://zfr.zafiros.xyz:3000/ZafirOS/ports/src/repos/core
   /usr/ports/main        http://zfr.zafiros.xyz:3000/ZafirOS/ports/src/repos/main
   /usr/ports/multilib    http://zfr.zafiros.xyz:3000/ZafirOS/ports/src/repos/multilib
