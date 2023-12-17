@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  scratchpkg
+#  zfrpkg
 #
 #  Copyright (c) 2018 by Emmett1  (emmett1.2miligrams@gmail.com)
 #
@@ -113,7 +113,7 @@ parse_opts $(extract_opts "$@")
 PKGDB_DIR="$(pkgadd --print-dbdir)"
 PKGDB_DIR="${PKGDB_DIR##/}"              # remove leading /
 PKGDBPERMS_DIR="$PKGDB_DIR.perms"
-LOCK_FILE="var/lib/scratchpkg/spkg.lock"
+LOCK_FILE="var/lib/zfrpkg/spkg.lock"
 
 # show help page
 [ "$SHOWHELP" ] || [ -z "$RMNAME" ] && {
