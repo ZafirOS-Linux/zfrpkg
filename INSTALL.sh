@@ -1,11 +1,11 @@
 #!/bin/sh
 
-BINDIR=/usr/bin
-CONFDIR=/etc
-CACHE_DIR=/var/cache/scratchpkg
-PORT_DIR=/usr/ports
-REVDEPD=/etc/revdep.d
-REVDEPCONF=/etc/revdep.conf
+BINDIR=$LFS/usr/bin
+CONFDIR=$LFS/etc
+CACHE_DIR=$LFS/var/cache/scratchpkg
+PORT_DIR=$LFS/usr/ports
+REVDEPD=$LFS/etc/revdep.d
+REVDEPCONF=$LFS/etc/revdep.conf
 
 install -d ${DESTDIR}${BINDIR}
 install -d ${DESTDIR}${CONFDIR}
