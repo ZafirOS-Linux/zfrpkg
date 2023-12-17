@@ -1,22 +1,4 @@
 #!/bin/sh
-#
-#  scratchpkg
-#
-#  Copyright (c) 2018 by Emmett1  (emmett1.2miligrams@gmail.com)
-#
-#  This program is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
 
 RED='\033[31m'
 GREEN='\033[32m'
@@ -714,9 +696,9 @@ scratch_sysup() {
 		echo "All packages are up to date."
 		return 0
 	}
-	[ "$(echo $PKG | grep -w scratchpkg)" ] && {
+	[ "$(echo $PKG | grep -w zfrpkg)" ] && {
 		echo
-		msgerr "Please upgrade 'scratchpkg' first."
+		msgerr "Please upgrade 'zfrpkg' first."
 		return 1
 	}
 	UPGPKG=0
@@ -1523,7 +1505,7 @@ Options:
     missingdep               print missing dependencies
     orphan                   print orphan installed ports
     foreign                  print foreign ports
-    printconfig <opts>       print scratchpkg configs
+    printconfig <opts>       print zfrpkg configs
     help                     print this help msg
 
 Global options:
@@ -1583,16 +1565,16 @@ BUILD_SCRIPT="spkgbuild"
 PKGDB_DIR="$(pkgadd --print-dbdir)"
 PKGDBPERMS_DIR="${PKGDB_DIR}.perms"
 
-REPO_FILE="${REPO_FILE:-/etc/scratchpkg.repo}"
-ALIAS_FILE="${ALIAS_FILE:-/etc/scratchpkg.alias}"
-MASK_FILE="${MASK_FILE:-/etc/scratchpkg.mask}"
-CONFIG_FILE="${CONFIG_FILE:-/etc/scratchpkg.conf}"
+REPO_FILE="${REPO_FILE:-/etc/zfrpkg.repo}"
+ALIAS_FILE="${ALIAS_FILE:-/etc/zfrpkg.alias}"
+MASK_FILE="${MASK_FILE:-/etc/zfrpkg.mask}"
+CONFIG_FILE="${CONFIG_FILE:-/etc/zfrpkg.conf}"
 WORLD_FILE="$(dirname $PKGDB_DIR)/world"
 
 # default value from pkgbuild
-SOURCE_DIR="/var/cache/scratchpkg/sources"
-PACKAGE_DIR="/var/cache/scratchpkg/packages"
-WORK_DIR="/var/cache/scratchpkg/work"
+SOURCE_DIR="/var/cache/zfrpkg/sources"
+PACKAGE_DIR="/var/cache/zfrpkg/packages"
+WORK_DIR="/var/cache/zfrpkg/work"
 CURL_OPTS=""
 COMPRESSION_MODE="xz"
 NO_STRIP="no"
