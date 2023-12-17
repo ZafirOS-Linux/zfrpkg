@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  scratchpkg
+#  zfrpkg
 #
 #  Copyright (c) 2018 by Emmett1  (emmett1.2miligrams@gmail.com)
 #
@@ -115,10 +115,10 @@ isinstalled() {
 
 parse_opts $(extract_opts "$@")
 
-SCRATCHPKG_DIR="var/lib/scratchpkg"
-PKGDB_DIR="$SCRATCHPKG_DIR/db"
+zfrpkg_DIR="var/lib/zfrpkg"
+PKGDB_DIR="$zfrpkg_DIR/db"
 PKGDBPERMS_DIR="$PKGDB_DIR.perms"
-LOCK_FILE="$SCRATCHPKG_DIR/spkg.lock"
+LOCK_FILE="$zfrpkg_DIR/spkg.lock"
 
 ROOT_DIR="${ROOT_DIR%/}" # remove trailing slash
 
@@ -196,9 +196,9 @@ if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
 	fi
 fi
 
-TMP_PKGADD="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_pkgadd"
-TMP_PKGINSTALL="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_pkginstall"
-TMP_CONFLICT="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_conflict"
+TMP_PKGADD="$ROOT_DIR/$zfrpkg_DIR/.tmp_pkgadd"
+TMP_PKGINSTALL="$ROOT_DIR/$zfrpkg_DIR/.tmp_pkginstall"
+TMP_CONFLICT="$ROOT_DIR/$zfrpkg_DIR/.tmp_conflict"
 
 # check integrity of package and save list file/dirs to install in the meantime
 tar -tvf $PKGNAME > $TMP_PKGADD 2>/dev/null || {
