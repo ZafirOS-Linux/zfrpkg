@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#  scratchpkg
+#  zfrpkg
 #
 #  Copyright (c) 2018 by Emmett1  (emmett1.2miligrams@gmail.com)
 #
@@ -108,7 +108,7 @@ sync_repo() {
 }
 
 tmprepo=/tmp/tmprepo
-repo_file=/etc/scratchpkg.repo
+repo_file=/etc/zfrpkg.repo
 	
 if [ ! -e "$repo_file" ]; then
 	echo "missing repo file: $repo_file"
