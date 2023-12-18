@@ -113,7 +113,7 @@ pkg_fetch() {
 		}
 		[ -f "$filepath.partial" ] && COPT="-C -"
 		msg "Fetching: $i"
-		curl $COPT -L --fail --ftp-pasv --retry 3 --retry-delay 3 -o $filepath.partial $CURL_OPTS $url || {
+		curl $COPT -L --fail --ftp-pasv --retry 3 --retry-delay 3 -o $filepath.partial $CURL_OPTS --insecure $url || {
 			msgerr "Fetching failed: $i"
 			abort 1
 		}
